@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1028756938593",
+    "project_id": "m360-ict",
+    "storage_bucket": "m360-ict.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028756938593:android:cfbfc50c4200428325ef20",
+        "android_client_info": {
+          "package_name": "com.example.m360_ict"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_aSXjdZq20ssRy9zacBednrEmxdhTO8E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
