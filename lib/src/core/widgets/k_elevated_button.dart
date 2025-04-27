@@ -13,7 +13,7 @@ class KElevatedButton extends StatelessWidget {
       alignment: Alignment.center,
       child: SizedBox(
         height: context.height * 0.05,
-        width: context.width * 0.95,
+        width: context.width * 0.85,
         child: ElevatedButton(
           onPressed: onPressed,
           style: ElevatedButton.styleFrom(backgroundColor: Theme.of(context).primaryColor),

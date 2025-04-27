@@ -48,7 +48,7 @@ class _SignUpViewState extends State<SignUpView> {
             BotToast.closeAllLoading();
           }
           else if (state is AuthSuccess) {
-            BotToast.showText(text: "Login Successful");
+            context.go(RouteName.signUp);
             BotToast.closeAllLoading();
           }
         },

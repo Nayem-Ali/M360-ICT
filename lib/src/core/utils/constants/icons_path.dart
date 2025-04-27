@@ -3,5 +3,7 @@ class IconsPath {
   static const String facebookIcon = "assets/icons/facebook.png";
   static const String googleIcon = "assets/icons/google.png";
   static const String microsoftIcon = "assets/icons/microsoft.png";
+  static const String placeIcon = "assets/icons/office.png";
+  static const String homeIcon = "assets/icons/home.png";
   static const String leafIcon = "assets/icons/leaf.png";
 }

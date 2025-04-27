@@ -13,7 +13,7 @@ class SignUpEvent extends AuthEvent{
 
   @override
   // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [];
 }
 
 class SignInEvent extends AuthEvent{
@@ -22,6 +22,6 @@ class SignInEvent extends AuthEvent{
   const SignInEvent({required this.authDto});
   @override
   // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [];
 
 }

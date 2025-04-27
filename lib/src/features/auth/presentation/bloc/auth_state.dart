@@ -7,14 +7,12 @@ abstract class AuthState extends Equatable{
 
 class AuthInitial extends AuthState{
   @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [];
 }
 
 class AuthLoading extends AuthState{
   @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [];
 }
 
 class AuthSuccess extends AuthState{
@@ -23,13 +21,11 @@ class AuthSuccess extends AuthState{
   const AuthSuccess({required this.userCredential});
 
   @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [];
 }
 
 class AuthFailure extends AuthState{
   @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [];
 
 }

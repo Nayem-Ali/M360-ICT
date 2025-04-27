@@ -41,7 +41,8 @@ class _SignInViewState extends State<SignInView> {
             BotToast.showText(text: "Something went wrong");
             BotToast.closeAllLoading();
           } else if (state is AuthSuccess) {
-            BotToast.showText(text: "Sign Up Successful");
+            while(context.canPop()){}
+            context.go(RouteName.home);
             BotToast.closeAllLoading();
           }
         },

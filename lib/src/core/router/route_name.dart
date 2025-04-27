@@ -5,4 +5,8 @@ class RouteName {
   static const String sendOtp = "/send-otp";
   static const String verifyOtp = "/verify-otp";
   static const String resetPassword = "/reset-password";
+  static const String home = "/home";
+  static const String addPlace = "/add-place";
+  static const String placeDetails = "/place-details";
+  static const String calculateEmission = "/calculate-emission";
 }

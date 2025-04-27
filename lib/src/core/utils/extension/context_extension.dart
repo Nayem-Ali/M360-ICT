@@ -7,6 +7,10 @@ extension Context on BuildContext {
 
   Size get size => MediaQuery.of(this).size;
 
+  TextStyle? get displayLarge => Theme.of(this).textTheme.displayLarge?.copyWith(
+    color: Theme.of(this).colorScheme.shadow.withValues(alpha: 90),
+  );
+
   TextStyle? get displayMedium => Theme.of(this).textTheme.displayMedium?.copyWith(
     color: Theme.of(this).colorScheme.shadow.withValues(alpha: 90),
   );

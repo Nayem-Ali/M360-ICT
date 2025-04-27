@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:m360_ict/src/core/database/remote/firebase_handler.dart';
 import 'package:m360_ict/src/core/router/route_name.dart';
 import 'package:m360_ict/src/core/utils/constants/images_path.dart';
 import 'package:m360_ict/src/core/widgets/k_rich_text.dart';
@@ -15,8 +17,13 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((t) async {
-      await Future.delayed(const Duration(seconds: 3));
-      if (mounted) context.goNamed(RouteName.signIn);
+      User? user = FirebaseHandler.firebaseAuth.currentUser;
+      if (user != null) {
+        context.goNamed(RouteName.home);
+      } else{
+        context.goNamed(RouteName.signIn);
+
+      }
     });
     super.initState();
   }
@@ -30,8 +37,8 @@ class _SplashViewState extends State<SplashView> {
             const Spacer(),
             Image.asset(ImagesPath.appIcon),
             const Spacer(),
-            const KRichText(leadingText: "Power By", trailingText: "M360 ICT"),
-            const SizedBox(height: 20)
+            const KRichText(leadingText: "Powered By", trailingText: "M360 ICT"),
+            const SizedBox(height: 20),
           ],
         ),
       ),

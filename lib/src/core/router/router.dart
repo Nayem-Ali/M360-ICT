@@ -11,6 +11,11 @@ import 'package:m360_ict/src/features/auth/presentation/views/send_otp_view.dart
 import 'package:m360_ict/src/features/auth/presentation/views/sign_in_view.dart';
 import 'package:m360_ict/src/features/auth/presentation/views/sign_up_view.dart';
 import 'package:m360_ict/src/features/auth/presentation/views/verify_otp_view.dart';
+import 'package:m360_ict/src/features/home/data/model/place_model.dart';
+import 'package:m360_ict/src/features/home/presentation/views/add_place_view.dart';
+import 'package:m360_ict/src/features/home/presentation/views/calculate_emission_view.dart';
+import 'package:m360_ict/src/features/home/presentation/views/home_view.dart';
+import 'package:m360_ict/src/features/home/presentation/views/place_details.dart';
 import 'package:m360_ict/src/shared/presentation//splash_view.dart';
 
 final GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -58,6 +63,35 @@ GoRouter router = GoRouter(
       name: RouteName.signUp,
       builder: (context, state) {
         return SignUpView();
+      },
+    ),
+    GoRoute(
+      path: "/home",
+      name: RouteName.home,
+      builder: (context, state) {
+        return HomeView();
+      },
+    ),
+    GoRoute(
+      path: "/add-place",
+      name: RouteName.addPlace,
+      builder: (context, state) {
+        return AddPlaceView();
+      },
+    ),
+    GoRoute(
+      path: "/place-details",
+      name: RouteName.placeDetails,
+      builder: (context, state) {
+        Place place = state.extra as Place;
+        return PlaceDetails(place: place,);
+      },
+    ),
+    GoRoute(
+      path: "/calculate-emission",
+      name: RouteName.calculateEmission,
+      builder: (context, state) {
+        return CalculateEmissionView();
       },
     ),
   ],

@@ -5,6 +5,7 @@ import 'package:m360_ict/src/core/dependency_injection/dependency_injection.dart
 import 'package:m360_ict/src/core/router/router.dart';
 import 'package:m360_ict/src/core/styles/theme/app_theme.dart';
 import 'package:m360_ict/src/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:m360_ict/src/features/home/presentation/bloc/bloc.dart';
 
 class App extends StatefulWidget {
   const App({super.key});
@@ -17,7 +18,10 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [BlocProvider(create: (context) => sl.get<AuthBloc>())],
+      providers: [
+        BlocProvider(create: (context) => sl.get<AuthBloc>()),
+        BlocProvider(create: (context) => sl.get<PlaceBloc>()),
+      ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         builder: BotToastInit(),
