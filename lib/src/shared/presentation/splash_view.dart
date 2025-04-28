@@ -17,6 +17,7 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((t) async {
+      await Future.delayed(const Duration(seconds:3));
       User? user = FirebaseHandler.firebaseAuth.currentUser;
       if (user != null) {
         context.goNamed(RouteName.home);

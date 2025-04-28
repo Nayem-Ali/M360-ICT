@@ -36,7 +36,7 @@ class _ResetPasswordViewState extends State<ResetPasswordView> {
                 ),
                 SizedBox(height: 15),
                 KPasswordField(
-                  controller: _newPasswordController,
+                  controller: _confirmPasswordController,
                   hint: "*******",
                   label: "Confirm Password",
                 ),

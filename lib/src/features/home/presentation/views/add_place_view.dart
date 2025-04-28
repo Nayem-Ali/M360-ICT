@@ -6,6 +6,7 @@ import 'package:m360_ict/src/core/utils/constants/icons_path.dart';
 import 'package:m360_ict/src/core/utils/extension/context_extension.dart';
 import 'package:m360_ict/src/core/widgets/k_elevated_button.dart';
 import 'package:m360_ict/src/features/home/presentation/components/info_tile.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class AddPlaceView extends StatefulWidget {
   const AddPlaceView({super.key});
@@ -26,15 +27,17 @@ class _AddPlaceViewState extends State<AddPlaceView> {
           onPressed: () => context.pop(),
           icon: Icon(Icons.arrow_back_ios, color: Colors.grey),
         ),
-        // actions: [
-        //   IconButton(
-        //     onPressed: () {
-        //       FirebaseAuth.instance.signOut();
-        //       context.goNamed(RouteName.signIn);
-        //     },
-        //     icon: Icon(Icons.logout),
-        //   ),
-        // ],
+        actions: [
+          IconButton(
+            onPressed: () async {
+              final GoogleSignIn _googleSignIn = GoogleSignIn();
+              await _googleSignIn.signOut();
+              await FirebaseAuth.instance.signOut();
+              context.goNamed(RouteName.signIn);
+            },
+            icon: Icon(Icons.logout),
+          ),
+        ],
       ),
       body: SafeArea(
         child: Padding(
