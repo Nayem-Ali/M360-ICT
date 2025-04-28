@@ -1,16 +1,13 @@
-# m360_ict
+# M360 ICT
 
-A new Flutter project.
+![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
+![Android Studio](https://img.shields.io/badge/android%20studio-346ac1?style=for-the-badge&logo=android%20studio&logoColor=white)
 
-## Getting Started
+This application was developed as part of the hiring process for the **Mobile App Developer (Flutter)** position. The project demonstrates:
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Implementation of clean architecture principles  
+- Efficient state management using Bloc  
+- Firebase for Authentication  
+- Go router used for effective routing
+- Dependency Injection achieved using GetIt
