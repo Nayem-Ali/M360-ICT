@@ -49,7 +49,7 @@ class _SignUpViewState extends State<SignUpView> {
           }
           else if (state is AuthSuccess) {
             BotToast.closeAllLoading();
-            context.go(RouteName.signIn);
+            context.go(RouteName.home);
           }
         },
         builder: (context, state) {
