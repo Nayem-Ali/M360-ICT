@@ -26,15 +26,15 @@ class _AddPlaceViewState extends State<AddPlaceView> {
           onPressed: () => context.pop(),
           icon: Icon(Icons.arrow_back_ios, color: Colors.grey),
         ),
-        actions: [
-          IconButton(
-            onPressed: () {
-              FirebaseAuth.instance.signOut();
-              context.goNamed(RouteName.signIn);
-            },
-            icon: Icon(Icons.logout),
-          ),
-        ],
+        // actions: [
+        //   IconButton(
+        //     onPressed: () {
+        //       FirebaseAuth.instance.signOut();
+        //       context.goNamed(RouteName.signIn);
+        //     },
+        //     icon: Icon(Icons.logout),
+        //   ),
+        // ],
       ),
       body: SafeArea(
         child: Padding(
@@ -65,18 +65,7 @@ class _AddPlaceViewState extends State<AddPlaceView> {
               Spacer(),
 
               InfoTile(),
-              // Column(
-              //   children: [
-              //     InfoTile(title: "Total Number of People", number: 52),
-              //     InfoTile(title: "Total Number of Rooms", number: 7),
-              //     InfoTile(title: "Total area (sq)", number: 3700),
-              //     InfoTile(title: "Total AC", number: 2),
-              //     InfoTile(title: "Total Refrigerators", number: 2),
-              //     InfoTile(title: "Total Computers", number: 60),
-              //     InfoTile(title: "Total Indoor Plants", number: 23),
-              //     InfoTile(title: "Total Kitchen Burner", number: 2),
-              //   ],
-              // ),
+
               Spacer(),
               KElevatedButton(
                 onPressed: () {
