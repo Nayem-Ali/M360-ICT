@@ -5,8 +5,8 @@ import 'package:m360_ict/src/core/router/route_name.dart';
 import 'package:m360_ict/src/core/utils/constants/app_fonts.dart';
 import 'package:m360_ict/src/core/utils/constants/images_path.dart';
 import 'package:m360_ict/src/core/utils/extension/context_extension.dart';
-import 'package:m360_ict/src/features/home/presentation/bloc/bloc.dart';
-import 'package:m360_ict/src/features/home/presentation/bloc/state.dart';
+import 'package:m360_ict/src/features/home/presentation/bloc/place_bloc.dart';
+import 'package:m360_ict/src/features/home/presentation/bloc/place_state.dart';
 import 'package:m360_ict/src/features/home/presentation/components/place_card.dart';
 
 class HomeView extends StatefulWidget {

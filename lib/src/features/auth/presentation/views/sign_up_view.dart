@@ -81,8 +81,12 @@ class _SignUpViewState extends State<SignUpView> {
                             return TextFormField(
                               controller: _contactController,
                               decoration: InputDecoration(
+                                contentPadding: const EdgeInsets.only(top: 12),
+                                hintStyle: context.labelLarge?.copyWith(
+                                  color: Theme.of(context).colorScheme.scrim.withAlpha(90),
+                                ),
                                 prefixIcon: Padding(
-                                  padding: const EdgeInsets.only(right: 8.0),
+                                  padding: const EdgeInsets.only(right: 8.0,),
                                   child: DropdownButton(
                                     style: context.labelLarge,
                                     value: _selectedCountryCode.value,
@@ -144,7 +148,7 @@ class _SignUpViewState extends State<SignUpView> {
                       alignment: Alignment.center,
                       margin: const EdgeInsets.symmetric(vertical: 30),
                       child: Text(
-                        "Or Sign In With",
+                        "Or Sign Up With",
                         style: context.titleSmall?.copyWith(
                           color: Theme.of(context).colorScheme.shadow.withValues(alpha: 90),
                         ),

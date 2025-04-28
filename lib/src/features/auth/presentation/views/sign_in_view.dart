@@ -57,7 +57,7 @@ class _SignInViewState extends State<SignInView> {
                       titleText: "Sign In",
                       helperText: "Let's save environment together",
                     ),
-                    SizedBox(height: context.height * 0.13),
+                    SizedBox(height: context.height * 0.11),
                     KTextField(
                       controller: _emailController,
                       hint: "use@example.com",
@@ -96,6 +96,7 @@ class _SignInViewState extends State<SignInView> {
                         ),
                       ],
                     ),
+                    SizedBox(height: context.height * 0.02),
                     KElevatedButton(
                       onPressed: () {
                         ctx.read<AuthBloc>().add(
@@ -112,7 +113,7 @@ class _SignInViewState extends State<SignInView> {
 
                     Container(
                       alignment: Alignment.center,
-                      margin: const EdgeInsets.symmetric(vertical: 30),
+                      margin: const EdgeInsets.symmetric(vertical: 25),
                       child: Text("Or Sign In With", style: context.titleSmall),
                     ),
                     SocialLoginOptions(),

@@ -20,9 +20,10 @@ class KTextField extends StatelessWidget {
             controller: controller,
             decoration: InputDecoration(
               hintText: hint,
-              contentPadding: const EdgeInsets.only(top: 0)
-              // labelText: label,
-              // labelStyle: context.titleMedium,
+              contentPadding: const EdgeInsets.only(top: 0),
+              hintStyle: context.titleMedium?.copyWith(
+                color: Theme.of(context).colorScheme.scrim.withAlpha(90),
+              ),
             ),
           ),
         ],

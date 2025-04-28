@@ -12,7 +12,20 @@
           "package_name": "com.example.m360_ict"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1028756938593-jlk92d84hm5ags0u2fch1gtcbkch9mav.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.m360_ict",
+            "certificate_hash": "065866dae2f75874beb70ead6d1093774c3b760b"
+          }
+        },
+        {
+          "client_id": "1028756938593-cd5v0a45l634d029smi3urj6hp376dem.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyC_aSXjdZq20ssRy9zacBednrEmxdhTO8E"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028756938593-cd5v0a45l634d029smi3urj6hp376dem.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1028756938593-5cm0cdnbnehdpci5tq1i3tsvhhromsuq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.m360Ict"
+              }
+            }
+          ]
         }
       }
     }

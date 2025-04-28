@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:m360_ict/src/core/utils/constants/icons_path.dart';
 import 'package:m360_ict/src/core/utils/extension/context_extension.dart';
 
 class KPasswordField extends StatelessWidget {
@@ -27,13 +28,14 @@ class KPasswordField extends StatelessWidget {
                 obscureText: obscure.value,
                 decoration: InputDecoration(
                   hintText: hint,
-                  // labelText: label,
-                  // labelStyle: context.titleMedium,
+                  hintStyle: context.labelLarge?.copyWith(
+                    color: Theme.of(context).colorScheme.scrim.withAlpha(90)
+                  ),
                   suffixIcon: IconButton(
                     onPressed: () {
                       obscure.value = !obscure.value;
                     },
-                    icon: Icon(value ? CupertinoIcons.eye : CupertinoIcons.eye_slash),
+                    icon: Image.asset(IconsPath.eyeIcon),
                   ),
                 ),
               );

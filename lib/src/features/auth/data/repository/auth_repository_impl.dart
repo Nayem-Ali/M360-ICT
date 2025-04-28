@@ -21,4 +21,11 @@ class AuthRepositoryImpl implements AuthRepository {
     debug("Email: $email");
     return await authRemoteDataSource.userSignUp(email: email, password: password);
   }
+
+  @override
+  Future<UserCredential?> signWithGoogle() async {
+    return await authRemoteDataSource.signInWithGoogle();
+  }
+
+
 }

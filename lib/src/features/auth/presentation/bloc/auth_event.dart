@@ -25,3 +25,9 @@ class SignInEvent extends AuthEvent{
   List<Object?> get props => [];
 
 }
+
+class GoogleSignInEvent extends AuthEvent{
+  @override
+  // TODO: implement props
+  List<Object?> get props => [];
+}

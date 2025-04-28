@@ -6,4 +6,5 @@ class IconsPath {
   static const String placeIcon = "assets/icons/office.png";
   static const String homeIcon = "assets/icons/home.png";
   static const String leafIcon = "assets/icons/leaf.png";
+  static const String eyeIcon = "assets/icons/eye.png";
 }

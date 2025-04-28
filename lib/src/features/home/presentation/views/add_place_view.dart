@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:m360_ict/src/core/router/route_name.dart';
 import 'package:m360_ict/src/core/utils/constants/icons_path.dart';
-import 'package:m360_ict/src/core/utils/constants/images_path.dart';
 import 'package:m360_ict/src/core/utils/extension/context_extension.dart';
 import 'package:m360_ict/src/core/widgets/k_elevated_button.dart';
 import 'package:m360_ict/src/features/home/presentation/components/info_tile.dart';
@@ -28,10 +27,13 @@ class _AddPlaceViewState extends State<AddPlaceView> {
           icon: Icon(Icons.arrow_back_ios, color: Colors.grey),
         ),
         actions: [
-          IconButton(onPressed: () {
-            FirebaseAuth.instance.signOut();
-            context.goNamed(RouteName.signIn);
-          }, icon: Icon(Icons.logout))
+          IconButton(
+            onPressed: () {
+              FirebaseAuth.instance.signOut();
+              context.goNamed(RouteName.signIn);
+            },
+            icon: Icon(Icons.logout),
+          ),
         ],
       ),
       body: SafeArea(
@@ -61,18 +63,27 @@ class _AddPlaceViewState extends State<AddPlaceView> {
                 ],
               ),
               Spacer(),
-              InfoTile(title: "Total Number of People", number: 52),
-              InfoTile(title: "Total Number of Rooms", number: 7),
-              InfoTile(title: "Total area (sq)", number: 3700),
-              InfoTile(title: "Total AC", number: 2),
-              InfoTile(title: "Total Refrigerators", number: 2),
-              InfoTile(title: "Total Computers", number: 60),
-              InfoTile(title: "Total Indoor Plants", number: 23),
-              InfoTile(title: "Total Kitchen Burner", number: 2),
+
+              InfoTile(),
+              // Column(
+              //   children: [
+              //     InfoTile(title: "Total Number of People", number: 52),
+              //     InfoTile(title: "Total Number of Rooms", number: 7),
+              //     InfoTile(title: "Total area (sq)", number: 3700),
+              //     InfoTile(title: "Total AC", number: 2),
+              //     InfoTile(title: "Total Refrigerators", number: 2),
+              //     InfoTile(title: "Total Computers", number: 60),
+              //     InfoTile(title: "Total Indoor Plants", number: 23),
+              //     InfoTile(title: "Total Kitchen Burner", number: 2),
+              //   ],
+              // ),
               Spacer(),
-              KElevatedButton(onPressed: () {
-                context.pushNamed(RouteName.calculateEmission);
-              }, buttonTitle: "Calculate Carbon Emission"),
+              KElevatedButton(
+                onPressed: () {
+                  context.pushNamed(RouteName.calculateEmission);
+                },
+                buttonTitle: "Calculate Carbon Emission",
+              ),
               SizedBox(height: 30),
             ],
           ),
