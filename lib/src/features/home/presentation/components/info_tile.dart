@@ -20,6 +20,7 @@ class _InfoTileState extends State<InfoTile> {
     "Total area (sq)",
     "Total AC",
     "Total Refrigerators",
+    "Total Computers",
     "Total Indoor Plants",
     "Total Kitchen Burner",
   ];
