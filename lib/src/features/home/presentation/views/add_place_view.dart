@@ -35,7 +35,7 @@ class _AddPlaceViewState extends State<AddPlaceView> {
               await FirebaseAuth.instance.signOut();
               context.goNamed(RouteName.signIn);
             },
-            icon: Icon(Icons.logout),
+            icon: Icon(Icons.logout, color:Colors.white),
           ),
         ],
       ),
