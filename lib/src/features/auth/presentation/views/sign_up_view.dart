@@ -48,6 +48,7 @@ class _SignUpViewState extends State<SignUpView> {
             BotToast.closeAllLoading();
           }
           else if (state is AuthSuccess) {
+            while(context.canPop()){}
             context.go(RouteName.home);
             BotToast.closeAllLoading();
           }
